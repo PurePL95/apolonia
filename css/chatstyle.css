@@ -1,0 +1,61 @@
+/* chatstyle.css */
+
+/* Ogólne stylizacje dla sekcji czatu */
+.chat-container {
+    background-color: #1e1e1e;
+    color: #f1f1f1;
+    padding: 20px;
+    border-radius: 10px;
+    width: 80%;
+    margin: 20px auto;
+}
+
+.chat-messages {
+    height: 400px;
+    overflow-y: auto;
+    background-color: #2a2a2a;
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+}
+
+.chat-message {
+    margin-bottom: 10px;
+}
+
+.chat-message strong {
+    color: #ffdd57;
+}
+
+.chat-timestamp {
+    font-size: 0.8em;
+    color: #999;
+    margin-left: 10px;
+}
+
+.chat-form {
+    display: flex;
+    gap: 10px;
+}
+
+.chat-form input[type="text"] {
+    flex: 1;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    outline: none;
+}
+
+.chat-form button {
+    padding: 10px 20px;
+    background-color: #ffdd57;
+    color: #1e1e1e;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.chat-form button:hover {
+    background-color: #ffcc00;
+}

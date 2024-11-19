@@ -1,0 +1,98 @@
+/* Reset stylów podstawowych */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* Styl dla elementów ogólnych */
+body {
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 14px;
+    line-height: 1.6;
+    color: #c0c0c0; /* Jasny szary dla tekstu */
+    background: url('img/bg.jpg') no-repeat center center fixed;
+    background-size: cover;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    padding-top: 0;
+}
+
+/* Styl dla kontenera głównego */
+.container {
+    margin: 0 auto;
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.7); /* Półprzezroczyste, ciemne tło */
+    color: #d9d9d9; /* Delikatnie jasnoszary tekst */
+    border: 1px solid #444; /* Ciemna ramka */
+    border-radius: 5px;
+}
+
+/* Elementy tekstowe */
+h1, h2, h3, h4, h5, h6 {
+    color: #ffcc00; /* Żółto-pomarańczowy kolor dla nagłówków */
+}
+
+p {
+    color: #c0c0c0; /* Szary dla tekstu akapitów */
+}
+
+/* Styl dla linków */
+a {
+    color: #ff6600; /* Jasny, postapokaliptyczny pomarańczowy */
+    text-decoration: none;
+}
+
+a:hover {
+    color: #ff3300; /* Ciemniejszy odcień pomarańczowego przy najechaniu */
+}
+
+/* Styl dla przycisków */
+button, .btn {
+    background-color: #5a5a5a; /* Ciemnoszary przycisk */
+    color: #ffffff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+button:hover, .btn:hover {
+    background-color: #333333; /* Ciemniejszy szary na hover */
+}
+
+/* Styl dla nawigacji */
+.navbar {
+    background-color: #2a2a2a; /* Ciemne tło dla nawigacji */
+    border-bottom: 1px solid #444;
+}
+
+.navbar a {
+    color: #c0c0c0; /* Jasnoszary tekst linków */
+}
+
+.navbar a:hover {
+    color: #ffcc00; /* Żółto-pomarańczowy na hover */
+}
+
+/* Styl dla formularzy */
+input[type="text"], input[type="email"], input[type="password"], textarea {
+    background-color: #333;
+    color: #fff;
+    border: 1px solid #555;
+    padding: 10px;
+    border-radius: 3px;
+    width: 100%;
+}
+
+input[type="text"]:focus, input[type="email"]:focus, input[type="password"]:focus, textarea:focus {
+    border-color: #ffcc00; /* Żółty border przy focus */
+    outline: none;
+}
+
+/* Dodatkowe efekty i animacje */
+div {
+    display: block;
+    unicode-bidi: isolate;
+}

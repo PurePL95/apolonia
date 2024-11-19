@@ -1,0 +1,194 @@
+/* Ustawienia ogólne */
+body {
+    font-family: 'Roboto', sans-serif;
+    background: url('../img/bg.jpg') no-repeat center center fixed;
+    background-size: cover;
+    color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+}
+
+/* Kontener główny gry */
+.game-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.7);
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+}
+
+/* Pasek nawigacyjny */
+.game-nav {
+    display: flex;
+    justify-content: space-around;
+    background: #333;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.game-nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+.game-nav li {
+    margin: 0 15px;
+}
+
+.game-nav a {
+    text-decoration: none;
+    color: #f4f4f4;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+.game-nav a:hover {
+    color: #ffcc00;
+}
+
+/* Nagłówek z profilem i zasobami */
+.game-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.profile-info {
+    text-align: center;
+}
+
+.profile-info img {
+    width: 80px;
+    border-radius: 50%;
+    border: 2px solid #ffcc00;
+}
+
+.profile-info h2 {
+    margin: 10px 0 5px;
+    color: #ffcc00;
+}
+
+.profile-info p {
+    margin: 0;
+    font-size: 14px;
+    color: #d9d9d9;
+}
+
+/* Zasoby gracza */
+.resources {
+    display: flex;
+    justify-content: space-around;
+    flex-grow: 1;
+}
+
+.resource-item {
+    display: flex;
+    align-items: center;
+}
+
+.resource-item img {
+    width: 24px;
+    height: 24px;
+    margin-right: 5px;
+}
+
+.resource-value {
+    font-size: 16px;
+    color: #ffffff;
+}
+
+/* Główna sekcja gry */
+.game-main {
+    display: flex;
+    justify-content: space-between;
+}
+
+.current-location {
+    background: rgba(50, 50, 50, 0.8);
+    padding: 15px;
+    border-radius: 5px;
+    flex: 2;
+    margin-right: 20px;
+}
+
+.current-location h3 {
+    margin-top: 0;
+    color: #ffcc00;
+}
+
+.current-location p {
+    font-size: 14px;
+    color: #b3b3b3;
+}
+
+/* Akcje gracza */
+.actions {
+    background: rgba(50, 50, 50, 0.8);
+    padding: 15px;
+    border-radius: 5px;
+    flex: 1;
+}
+
+.actions h3 {
+    margin-top: 0;
+    color: #ffcc00;
+}
+
+.actions ul {
+    list-style: none;
+    padding: 0;
+}
+
+.actions li {
+    margin-bottom: 10px;
+}
+
+.actions a {
+    text-decoration: none;
+    color: #ffffff;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+.actions a:hover {
+    color: #ffcc00;
+}
+
+.progress-bar {
+    margin: 10px 0;
+    font-size: 14px;
+}
+
+.progress {
+    width: 100%;
+    height: 20px; /* Wysokość paska postępu */
+    background-color: #ddd; /* Kolor tła paska */
+    border-radius: 5px; /* Zaokrąglone rogi */
+    overflow: hidden; /* Ukrycie wszystkiego, co wychodzi poza ramy paska */
+}
+
+.progress-fill {
+    height: 100%; /* Wypełnienie całej wysokości paska */
+    width: 0; /* Domyślnie 0%, zmieniane w kodzie PHP */
+    transition: width 0.3s; /* Animacja zmiany szerokości */
+}
+
+/* Pasek zdrowia - czerwony */
+.progress-fill.health {
+    background-color: #ff4d4d; /* Czerwony kolor */
+}
+
+/* Pasek energii - niebieski */
+.progress-fill.energy {
+    background-color: #4d94ff; /* Niebieski kolor */
+}
+
+/* Pasek doświadczenia - żółty */
+.progress-fill.experience {
+    background-color: #ffcc00; /* Żółty kolor */
+}
+

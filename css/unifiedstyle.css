@@ -1,0 +1,134 @@
+/* Reset stylów podstawowych */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* Styl ogólny dla ciała */
+body {
+    font-family: 'Roboto', "Helvetica Neue", Arial, sans-serif;
+    font-size: 14px;
+    line-height: 1.6;
+    color: #f4f4f4;
+    background: url('img/bg.jpg') no-repeat center center fixed;
+    background-size: cover;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+
+/* Główny kontener */
+.container, .game-container {
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.7);
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+    color: #d9d9d9;
+}
+
+/* Nagłówki */
+h1, h2, h3, h4, h5, h6 {
+    color: #ffcc00;
+    margin-bottom: 10px;
+}
+
+p {
+    color: #c0c0c0;
+    margin-bottom: 10px;
+}
+
+/* Styl dla nawigacji */
+.navbar, .game-nav {
+    display: flex;
+    justify-content: space-around;
+    background-color: #2a2a2a;
+    padding: 10px;
+    border-radius: 5px;
+    border-bottom: 1px solid #444;
+}
+
+.navbar a, .game-nav a {
+    color: #c0c0c0;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+.navbar a:hover, .game-nav a:hover {
+    color: #ffcc00;
+}
+
+/* Styl dla zasobów gracza */
+.resources, .resource-item {
+    display: flex;
+    align-items: center;
+    color: #ffffff;
+}
+
+.resource-item img {
+    width: 24px;
+    height: 24px;
+    margin-right: 5px;
+}
+
+/* Styl dla przycisków */
+button, .btn {
+    background-color: #5a5a5a;
+    color: #ffffff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover, .btn:hover {
+    background-color: #333333;
+}
+
+/* Główna sekcja gry */
+.game-main {
+    display: flex;
+    justify-content: space-between;
+}
+
+.current-location, .actions {
+    background: rgba(50, 50, 50, 0.8);
+    padding: 15px;
+    border-radius: 5px;
+    color: #b3b3b3;
+}
+
+.current-location h3, .actions h3 {
+    color: #ffcc00;
+}
+
+/* Formularze */
+input[type="text"], input[type="email"], input[type="password"], textarea {
+    background-color: #333;
+    color: #fff;
+    border: 1px solid #555;
+    padding: 10px;
+    border-radius: 3px;
+    width: 100%;
+}
+
+input[type="text"]:focus, input[type="email"]:focus, input[type="password"]:focus, textarea:focus {
+    border-color: #ffcc00;
+    outline: none;
+}
+
+/* Dodatkowe efekty */
+a {
+    color: #ff6600;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #ff3300;
+}

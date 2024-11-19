@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Apolonia - Gra Przeglądarkowa RPG</title>
+    <meta name="description" content="Apolonia to nowoczesna gra fabularna RPG w przeglądarce, oferująca bogaty świat fantasy, rozbudowane mechaniki i interakcje graczy.">
+    <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="css/unifiedstyle.css">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        /* Ukrywanie formularzy na starcie */
+        #register-section, #login-section {
+            display: none;
+        }
+        /* Styl dla kontenera formularzy */
+        .form-container {
+            max-width: 400px;
+            background: rgba(0, 0, 0, 0.7);
+            padding: 20px;
+            border-radius: 10px;
+            margin-top: 50px;
+        }
+    </style>
+</head>
+<body style="margin: 0; padding: 0; background: url('img/bg.jpg') no-repeat center center fixed; background-size: cover;">
+
+    <!-- Nawigacja -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+            <a class="navbar-brand" href="/">
+                <img src="images/logo.png" alt="Apolonia" style="height: 40px;">
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item"><a class="nav-link" href="#" id="show-register">Rejestracja</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#" id="show-login">Logowanie</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Tło i treść -->
+         <div class="container text-center text-white" style="margin-top: 100px;">
+    <h1 style="text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);">Wejdź do świata Apolonii i walcz o przetrwanie!</h1>
+    <p style="text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.8);">
+        Rok 2130. Świat, który znasz, przestał istnieć. Po wyniszczającej wojnie nuklearnej, ziemie dawnej Polski pokryły się popiołem, a natura zaczęła przejmować kontrolę nad opustoszałymi ruinami cywilizacji. Apolonia to miejsce, gdzie odwaga, spryt i nieustępliwość decydują o Twoim losie. Zmierz się z mutacjami, walcz o zasoby i zbuduj nowe życie pośród chaosu.
+        <br><br>
+        Zarejestruj się teraz i stań się częścią tej postapokaliptycznej przygody! Wybierz swoją ścieżkę – przetrwaj jako bezwzględny łowca, mądry handlarz, czy lider społeczności dążącej do odbudowy cywilizacji. Świat Apolonii czeka na Ciebie. Czy jesteś gotów napisać własną historię wśród ruin i nadziei?
+    </p>
+        </div>
+
+    <!-- Formularz rejestracji -->
+    <div id="register-section" class="container form-container text-white">
+        <h2 class="text-center">Rejestracja</h2>
+        <form action="php/register.php?action=register" method="post">
+            <div class="form-group">
+                <label for="InputUser">Nazwa użytkownika</label>
+                <input type="text" id="InputUser" class="form-control" name="user" placeholder="Wpisz nazwę użytkownika" required>
+            </div>
+            <div class="form-group">
+                <label for="InputEmail">Email</label>
+                <input type="email" id="InputEmail" class="form-control" name="email" placeholder="Wpisz email" required>
+            </div>
+            <div class="form-group">
+                <label for="InputVEmail">Potwierdź email</label>
+                <input type="email" id="InputVEmail" class="form-control" name="vemail" placeholder="Potwierdź email" required>
+            </div>
+            <div class="form-group">
+                <label for="InputPassword">Hasło</label>
+                <input type="password" id="InputPassword" class="form-control" name="pass" placeholder="Wpisz hasło" required>
+            </div>
+            <button type="submit" class="btn btn-success btn-block">Zarejestruj się</button>
+        </form>
+    </div>
+
+    <!-- Formularz logowania -->
+    <div id="login-section" class="container form-container text-white">
+        <h2 class="text-center">Logowanie</h2>
+        <form action="php/login.php" method="post">
+            <div class="form-group">
+                <label for="LoginEmail">Email</label>
+                <input type="email" id="LoginEmail" class="form-control" name="email" placeholder="Wpisz email" required>
+            </div>
+            <div class="form-group">
+                <label for="LoginPassword">Hasło</label>
+                <input type="password" id="LoginPassword" class="form-control" name="pass" placeholder="Wpisz hasło" required>
+            </div>
+            <button type="submit" class="btn btn-primary btn-block">Zaloguj się</button>
+        </form>
+    </div>
+
+    <!-- Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <!-- JavaScript/jQuery do pokazywania i ukrywania formularzy -->
+    <script>
+        $(document).ready(function() {
+            $('#show-register').click(function() {
+                $('#login-section').hide();
+                $('#register-section').fadeIn();
+            });
+
+            $('#show-login').click(function() {
+                $('#register-section').hide();
+                $('#login-section').fadeIn();
+            });
+        });
+    </script>
+</body>
+</html>
